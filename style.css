@@ -1496,14 +1496,9 @@ footer ul {
     border: 3px solid #ffffff4d;
     outline: none;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 15px;
     cursor: pointer;
-    letter-spacing: 2px;
-}
-
-.hero-btn span {
-    line-height: 1;
-    padding-top: 6px;
+    letter-spacing: 1px;
 }
 
 .icon {
