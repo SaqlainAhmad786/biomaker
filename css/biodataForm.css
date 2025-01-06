@@ -1,0 +1,394 @@
+.navButton {
+    background-color: white;
+    color: #f27479 !important;
+    font-weight: 600 !important;
+}
+
+dialog {
+    background-color: #FFB0B0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 460px;
+    min-width: 320px;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: 0 5px 30px 0 #000;
+    animation: fadeIn 300ms ease both;
+    padding: 1rem;
+    margin: 0;
+}
+
+dialog::backdrop {
+    animation: fadeIn 300ms ease both;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.planDialog .closePlanDialogBtn {
+    all: unset;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 0;
+}
+
+.planDialog .closePlanDialogBtn img {
+    width: 12px;
+    height: 12px;
+}
+
+.planDialog .dialogHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.planDialog .dialogHeader img {
+    background-color: white;
+    height: 48px;
+    width: 48px;
+    padding: 1rem;
+    border-radius: 100%;
+    border: solid 1.5px #9e9e9e;
+}
+
+.planDialog .dialogHeader h6 {
+    padding-top: 0;
+    padding-bottom: 8px;
+    line-height: 1;
+    font-size: 20px;
+}
+
+.planDialog .dialogHeader p {
+    line-height: 1.5;
+    margin: 0;
+}
+
+.planDialog .features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 12px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.planDialog .features img {
+    width: 14px;
+    height: 14px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.planForm .planHolder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 8px;
+    margin-block: 1rem;
+}
+
+.planForm label {
+    background-color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: all 0.2s ease;
+}
+
+.planHolder input[type="radio"]:checked+label,
+.planHolder label:has(input[type="radio"]:checked) {
+    border: 4px solid #F27479;
+    box-shadow: 0 0 10px #F27479;
+}
+
+.planHolder .priceBtn {
+    padding: 0.25rem 0.75rem;
+    border-radius: 100vh;
+    background-color: #F27479;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    letter-spacing: 1px;
+    margin-top: 8px;
+
+    &:hover {
+        background-color: #FFB0B0;
+    }
+}
+
+.planForm label input[type="radio"] {
+    display: none;
+}
+
+.planForm label img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 4px;
+}
+
+.planForm label .headerPara {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    line-height: 1;
+}
+
+.planForm label .subheaderPara {
+    margin: 0;
+}
+
+.planForm label .desc {
+    font-size: 12px;
+    line-height: 1.2;
+    margin: 0;
+    color: rgb(0, 0, 0, 0.6);
+}
+
+.planForm .submitBtn {
+    background-color: white;
+    color: #f27479;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+
+    &:hover {
+        background-color: #f27479;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+}
+
+#multiStepForm {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: relative;
+}
+
+#multiStepForm h3 {
+    color: black;
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+.select-cont {
+    position: absolute;
+    right: 28px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.select-cont select {
+    width: 160px;
+    padding: 8px;
+    border: solid 1.5px #9e9e9e;
+    border-radius: 0.75rem;
+    background: none;
+    color: black;
+}
+
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+}
+
+.form-input-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.profile-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.form-section .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: solid 1.5px #9e9e9e;
+}
+
+#file-input {
+    color: #444;
+    padding: 2px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba(8, 8, 8, 0.288);
+}
+
+#file-input::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #084cdf;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+#file-input::file-selector-button:hover {
+    background: #0d45a5;
+}
+
+.logo-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: solid 1.5px #9e9e9e;
+}
+
+.logo-image-container button {
+    background-color: #f27479;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+
+    &:hover {
+        background-color: white;
+        color: #f27479;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+}
+
+.logo-image-container input[type="text"] {
+    border: solid 1.5px #9e9e9e;
+    border-radius: 0.75rem;
+    background: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    color: black;
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-group {
+    position: relative;
+}
+
+.input {
+    width: 90%;
+    border: solid 1.5px #9e9e9e;
+    border-radius: 0.75rem;
+    background: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: black;
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-label {
+    position: absolute;
+    top: -6px;
+    left: 15px;
+    color: rgb(0, 0, 0, 0.6);
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus,
+input:valid {
+    outline: none;
+    border: 1.5px solid #ED1954;
+}
+
+.input:focus~label,
+input:valid~label {
+    transform: translateY(-15%) scale(0.8);
+    background-color: white;
+    padding: 0 .2em;
+    color: #ED1954;
+    font-weight: 500;
+}
+
+.buttons {
+    /* display: flex;
+    justify-content: center;
+    gap: 8px; */
+    margin-top: 8px;
+}
+
+.buttons button {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f27479;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+
+    &:hover {
+        background-color: #d41e5b;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form-input-container {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons button {
+        margin-right: 0;
+    }
+
+    .form-section {
+        margin-top: 48px;
+    }
+
+    .planForm .planHolder {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
