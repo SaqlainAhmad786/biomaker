@@ -1,0 +1,72 @@
+#image-carousel .imageBtn {
+    all: unset;
+}
+
+.template-carousel {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.template-carousel {
+    margin-bottom: 1rem;
+}
+
+.download-biodata {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.cssbuttons-io-button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.5em 0.8em 1.2em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(0deg,
+            #f27479 0%,
+            #FF8A8A 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #FFD0D0;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+}
+
+.cssbuttons-io-button svg {
+    margin-right: 8px;
+}
+
+.cssbuttons-io-button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #FFD0D0;
+}
+
+.cssbuttons-io-button:active {
+    box-shadow: 0 0.3em 1em -0.5em #FFD0D0;
+}
+
+.biodata-preview-img-container {
+    width: 600px;
+    height: auto;
+    position: relative;
+    overflow: scroll;
+}
+
+.biodata-preview-img-container .data-holder {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+}
+
+.data-holder p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 12px;
+    color: maroon;
+    letter-spacing: 1px;
+}

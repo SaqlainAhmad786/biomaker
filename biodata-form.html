@@ -61,14 +61,45 @@
             <img src="./assets/instant.png" alt="">
         </div>
     </dialog>
+    <dialog class="logoDialog" id="dialog">
+        <button class="closeLogoDialogBtn"><img src="./assets/close.png"></button>
+        <div class="logos">
+            <button onClick="changeReligiousLogo('./assets/religiousLogos/bhim1.png')"><img
+                    src="./assets/religiousLogos/bhim1.png" alt=""></button>
+            <button onClick="changeReligiousLogo('./assets/religiousLogos/christian1.png')"><img
+                    src="./assets/religiousLogos/christian1.png" alt=""></button>
+            <button onClick="changeReligiousLogo('./assets/religiousLogos/christian2.png')"><img
+                    src="./assets/religiousLogos/christian2.png" alt=""></button>
+            <button onClick="changeReligiousLogo('./assets/religiousLogos/ganesh1.png')"><img
+                    src="./assets/religiousLogos/ganesh1.png" alt=""></button>
+            <button onClick="changeReligiousLogo('./assets/religiousLogos/ganesh2.png')"><img
+                    src="./assets/religiousLogos/ganesh2.png" alt=""></button>
+            <button onClick="changeReligiousLogo('./assets/religiousLogos/islam1.png')"><img
+                    src="./assets/religiousLogos/islam1.png" alt=""></button>
+            <button onClick="changeReligiousLogo('./assets/religiousLogos/islam2.png')"><img
+                    src="./assets/religiousLogos/islam2.png" alt=""></button>
+            <button onClick="changeReligiousLogo('./assets/religiousLogos/om.png')"><img
+                    src="./assets/religiousLogos/om.png" alt=""></button>
+            <button onClick="changeReligiousLogo('./assets/religiousLogos/shiva1.png')"><img
+                    src="./assets/religiousLogos/shiva1.png" alt=""></button>
+            <button onClick="changeReligiousLogo('./assets/religiousLogos/shiva2.png')"><img
+                    src="./assets/religiousLogos/shiva2.png" alt=""></button>
+            <button onClick="changeReligiousLogo('./assets/religiousLogos/shivaji1.png')"><img
+                    src="./assets/religiousLogos/shivaji1.png" alt=""></button>
+            <button onClick="changeReligiousLogo('./assets/religiousLogos/shivaji2.png')"><img
+                    src="./assets/religiousLogos/shivaji2.png" alt=""></button>
+            <button onClick="changeReligiousLogo('./assets/religiousLogos/sikh1.png')"><img
+                    src="./assets/religiousLogos/sikh1.png" alt=""></button>
+            <button onClick="changeReligiousLogo('./assets/religiousLogos/sikh2.png')"><img
+                    src="./assets/religiousLogos/sikh2.png" alt=""></button>
+            <button onClick="changeReligiousLogo('./assets/religiousLogos/swastik.png')"><img
+                    src="./assets/religiousLogos/swastik.png" alt=""></button>
+        </div>
+    </dialog>
     <div class="site-wrapper">
-
         <div class="doc-loader">
             <img src="images/preloader.gif" alt="">
         </div>
-
-
-
         <header class="header-holder">
             <div class="menu-wrapper center-relative relative">
                 <div class="header-logo">
@@ -125,197 +156,161 @@
                                     <select id="languageSelect">
                                         <option value="english">English</option>
                                         <option value="hindi">हिन्दी</option>
+                                        <option value="kannada">ಕನ್ನಡ</option>
+                                        <option value="marathi">मराठी</option>
+                                        <option value="telugu">తెలుగు</option>
                                     </select>
                                 </div>
                                 <div class="form-section active">
                                     <h3 data-key="personalInformation">Personal Information</h3>
                                     <div class="form-input-container">
-                                        <div class="input-group">
-                                            <input required type="text" name="full_name" class="input">
-                                            <label class="user-label" data-key="fullName">Full Name</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="fullName">Full Name</label>
+                                            <input type="text" name="full_name" id="full_name" class="input"
+                                                placeholder="Saurabh">
                                         </div>
-                                        <div class="input-group">
-                                            <input type="text" name="dob" class="input">
-                                            <label class="user-label" data-key="dateOfBirth">Date of Birth</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="dateOfBirth">Date of Birth</label>
+                                            <input type="text" name="dob" id="dob" class="input"
+                                                placeholder="DD/MM/YYYY">
                                         </div>
-                                        <div class="input-group">
-                                            <input type="text" name="height" class="input">
-                                            <label class="user-label" data-key="height">Height</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="height">Height</label>
+                                            <input type="text" name="height" id="height" class="input"
+                                                placeholder="5'11">
                                         </div>
-                                        <div class="input-group">
-                                            <input type="text" name="text" class="input">
-                                            <label class="user-label" data-key="placeOfBirth">Place of Birth</label>
-                                        </div>
-                                    </div>
-                                    <div class="form-input-container">
-                                        <div class="input-group">
-                                            <input type="text" name="religion" class="input">
-                                            <label class="user-label" data-key="religion">Religion</label>
-                                        </div>
-                                        <div class="input-group">
-                                            <input type="text" name="caste" class="input">
-                                            <label class="user-label" data-key="caste">Caste</label>
-                                        </div>
-                                        <div class="input-group">
-                                            <input type="text" name="rashi" class="input">
-                                            <label class="user-label" data-key="rashi">Rashi</label>
-                                        </div>
-                                        <div class="input-group">
-                                            <input type="text" name="nakshatra" class="input">
-                                            <label class="user-label" data-key="nakshatra">Nakshatra</label>
-                                        </div>
-                                        <div class="input-group">
-                                            <input type="text" name="manglik" class="input">
-                                            <label class="user-label" data-key="manglik">Manglik</label>
-                                        </div>
-                                        <div class="input-group">
-                                            <input type="text" name="gotra" class="input">
-                                            <label class="user-label" data-key="gotra">Gotra</label>
-                                        </div>
-                                        <div class="input-group">
-                                            <input type="text" name="gan" class="input">
-                                            <label class="user-label" data-key="gan">Gan</label>
-                                        </div>
-                                        <div class="input-group">
-                                            <input type="text" name="complexion" class="input">
-                                            <label class="user-label" data-key="complexion">Complexion</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="placeOfBirth">Place of Birth</label>
+                                            <input type="text" name="place_of_birth" id="place_of_birth" class="input"
+                                                placeholder="Varanasi">
                                         </div>
                                     </div>
                                     <div class="form-input-container">
-                                        <div class="input-group">
-                                            <input type="text" name="blood_group" class="input">
-                                            <label class="user-label" data-key="bloodGroup">Blood Group</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="religion">Religion</label>
+                                            <input type="text" name="religion" id="religion" class="input"
+                                                placeholder="Hindu, Islam, etc">
                                         </div>
-                                        <div class="input-group">
-                                            <input type="text" name="education" class="input">
-                                            <label class="user-label" data-key="education">Education</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="caste">Caste</label>
+                                            <input type="text" name="caste" id="caste" class="input"
+                                                placeholder="Gupta, Jain, Shia, etc">
                                         </div>
-                                        <div class="input-group">
-                                            <input type="text" name="job" class="input">
-                                            <label class="user-label" data-key="job">Job/Occupation</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="rashi">Rashi</label>
+                                            <input type="text" name="rashi" id="rashi" class="input"
+                                                placeholder="Rashi">
                                         </div>
-                                        <div class="input-group">
-                                            <input type="text" name="salary" class="input">
-                                            <label class="user-label" data-key="salary">Salary</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="nakshatra">Nakshatra</label>
+                                            <input type="text" name="nakshatra" id="nakshatra" class="input"
+                                                placeholder="Nakshatra">
+                                        </div>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="manglik">Manglik</label>
+                                            <input type="text" name="manglik" id="manglik" class="input"
+                                                placeholder="Manglik">
+                                        </div>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="gotra">Gotra</label>
+                                            <input type="text" name="gotra" id="gotra" class="input"
+                                                placeholder="Gotra">
+                                        </div>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="gan">Gan</label>
+                                            <input type="text" name="gan" id="gan" class="input" placeholder="Gan">
+                                        </div>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="complexion">Complexion</label>
+                                            <input type="text" name="complexion" id="complexion" class="input"
+                                                placeholder="Fair, Dark, etc">
+                                        </div>
+                                    </div>
+                                    <div class="form-input-container">
+                                        <div class="coolinput">
+                                            <label class="text" data-key="bloodGroup">Blood Group</label>
+                                            <input type="text" name="blood_group" id="blood_group" class="input"
+                                                placeholder="A+, B+, etc">
+                                        </div>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="education">Education</label>
+                                            <input type="text" name="education" id="education" class="input"
+                                                placeholder="Graduate, Post Graduate, etc">
+                                        </div>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="job">Job/Occupation</label>
+                                            <input type="text" name="job" id="job" class="input"
+                                                placeholder="Job/Occupation">
+                                        </div>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="salary">Salary</label>
+                                            <input type="text" name="salary" id="salary" class="input"
+                                                placeholder="50000, 60000, etc">
                                         </div>
                                     </div>
                                     <h3 data-key="familyDetails">Family Details</h3>
                                     <div class="form-input-container">
-                                        <div class="input-group">
-                                            <input type="text" name="father_name" class="input">
-                                            <label class="user-label" data-key="fatherName">Father name</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="fatherName">Father name</label>
+                                            <input type="text" name="father_name" id="father_name" class="input"
+                                                placeholder="Father name">
                                         </div>
-                                        <div class="input-group">
-                                            <input type="text" name="father_job" class="input">
-                                            <label class="user-label" data-key="fatherJob">Father Occupation</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="fatherJob">Father Occupation</label>
+                                            <input type="text" name="father_job" id="father_job" class="input"
+                                                placeholder="Businessman">
                                         </div>
-                                        <div class="input-group">
-                                            <input type="text" name="mother_name" class="input">
-                                            <label class="user-label" data-key="motherName">Mother name</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="motherName">Mother name</label>
+                                            <input type="text" name="mother_name" id="mother_name" class="input"
+                                                placeholder="Mother name">
                                         </div>
-                                        <div class="input-group">
-                                            <input type="text" name="mother_job" class="input">
-                                            <label class="user-label" data-key="motherJob">Mother Occupation</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="motherJob">Mother Occupation</label>
+                                            <input type="text" name="mother_job" id="mother_job" class="input"
+                                                placeholder="Home maker">
                                         </div>
-                                        <div class="input-group">
-                                            <input type="text" name="sister" class="input">
-                                            <label class="user-label" data-key="sister">Sisters</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="sister">Sisters</label>
+                                            <input type="text" name="sister" id="sister" class="input" placeholder="2">
                                         </div>
-                                        <div class="input-group">
-                                            <input type="text" name="brother" class="input">
-                                            <label class="user-label" data-key="brother">Brothers</label>
-                                        </div>
-                                    </div>
-                                    <h3 data-key="additionalDetails">Additional Details</h3>
-                                    <div class="form-input-container">
-                                        <div class="input-group">
-                                            <input type="text" name="mobile" class="input">
-                                            <label class="user-label" data-key="mobile">Mobile number</label>
-                                        </div>
-                                        <div class="input-group">
-                                            <input type="text" name="address" class="input">
-                                            <label class="user-label" data-key="address">Address</label>
-                                        </div>
-                                    </div>
-                                    <!-- <h3 data-key="extraDetails">Extra Details</h3> -->
-                                    <div class="profile-image-container">
-                                        <div class="profile-image">
-                                            <img src="https://s3.amazonaws.com/37assets/svn/765-default-avatar.png"
-                                                alt="profile_image">
-                                        </div>
-                                        <input type="file" accept="image/*" id="file-input">
-                                    </div>
-                                    <div class="logo-image-container">
-                                        <div class="logo-image">
-                                            <img src="https://img.freepik.com/premium-photo/red-symbol-with-symbol-god-it_926865-4367.jpg?semt=ais_hybrid"
-                                                alt="profile_image">
-                                        </div>
-                                        <button>Change</button>
-                                        <input type="text" accept="image/*">
-                                    </div>
-                                </div>
-                                <!-- <div class="form-section">
-                                    <h3 data-key="familyDetails">Family Details</h3>
-                                    <div class="form-input-container">
-                                        <div class="input-group">
-                                            <input type="text" name="father_name" class="input">
-                                            <label class="user-label" data-key="fatherName">Father name</label>
-                                        </div>
-                                        <div class="input-group">
-                                            <input type="text" name="father_job" class="input">
-                                            <label class="user-label" data-key="fatherJob">Father Occupation</label>
-                                        </div>
-                                        <div class="input-group">
-                                            <input type="text" name="mother_name" class="input">
-                                            <label class="user-label" data-key="motherName">Mother name</label>
-                                        </div>
-                                        <div class="input-group">
-                                            <input type="text" name="mother_job" class="input">
-                                            <label class="user-label" data-key="motherJob">Mother Occupation</label>
-                                        </div>
-                                        <div class="input-group">
-                                            <input type="text" name="sister" class="input">
-                                            <label class="user-label" data-key="sister">Sisters</label>
-                                        </div>
-                                        <div class="input-group">
-                                            <input type="text" name="brother" class="input">
-                                            <label class="user-label" data-key="brother">Brothers</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="brother">Brothers</label>
+                                            <input type="text" name="brother" id="brother" class="input"
+                                                placeholder="2">
                                         </div>
                                     </div>
                                     <h3 data-key="additionalDetails">Additional Details</h3>
                                     <div class="form-input-container">
-                                        <div class="input-group">
-                                            <input type="text" name="mobile" class="input">
-                                            <label class="user-label" data-key="mobile">Mobile number</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="mobile">Mobile number</label>
+                                            <input type="text" name="mobile" id="mobile" class="input"
+                                                placeholder="9876543210">
                                         </div>
-                                        <div class="input-group">
-                                            <input type="text" name="address" class="input">
-                                            <label class="user-label" data-key="address">Address</label>
+                                        <div class="coolinput">
+                                            <label class="text" data-key="address">Address</label>
+                                            <input type="text" name="address" id="address" class="input"
+                                                placeholder="Varanasi, Uttar Pradesh">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-section">
-                                    <h3 data-key="extraDetails">Extra Details</h3>
                                     <div class="profile-image-container">
                                         <div class="profile-image">
                                             <img src="https://s3.amazonaws.com/37assets/svn/765-default-avatar.png"
-                                                alt="profile_image">
+                                                alt="profile_image" id="profile-image">
                                         </div>
-                                        <input type="file" accept="image/*" id="file-input">
+                                        <input type="file" accept="image/*" class="profile-input" id="file-input">
                                     </div>
                                     <div class="logo-image-container">
                                         <div class="logo-image">
                                             <img src="https://img.freepik.com/premium-photo/red-symbol-with-symbol-god-it_926865-4367.jpg?semt=ais_hybrid"
-                                                alt="profile_image">
+                                                alt="logo_image" class="logoImage">
                                         </div>
-                                        <button>Change</button>
+                                        <button id="logoChangeBtn" type="button"><i class="fa fa-edit"></i>
+                                            Change</button>
                                         <input type="text" accept="image/*">
                                     </div>
-                                </div> -->
+                                </div>
                                 <div class="buttons">
-                                    <!-- <button type="button" id="prevBtn" onclick="changeSection(-1)" disabled><i
-                                            class="fa fa-chevron-left"></i> Previous</button>
-                                    <button type="button" id="nextBtn" onclick="changeSection(1)">Next <i class="fa fa-chevron-right"></i></button> -->
                                     <button type="submit" id="submitBtn">SUBMIT</button>
                                 </div>
                             </form>

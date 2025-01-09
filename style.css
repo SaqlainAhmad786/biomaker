@@ -322,7 +322,7 @@ body .sm-clean li.current_page_item>a {
 
 .section {
     background-color: #1E1E1E;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .section h2.entry-title,
@@ -1803,9 +1803,9 @@ footer ul {
         font-size: 30px;
     }
 
-    .site-content {
+    /* .site-content {
         overflow: hidden;
-    }
+    } */
 
     .section.page-split h2.entry-title {
         max-width: 90%;
