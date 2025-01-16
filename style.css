@@ -1437,6 +1437,15 @@ footer ul {
     margin-bottom: 50px;
 }
 
+.footer-info a {
+    color: #969696 !important;
+    font-size: 14px;
+
+    &:hover {
+        color: #f27479 !important;
+    }
+}
+
 .social-holder {
     margin-bottom: 35px;
 }
