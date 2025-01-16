@@ -24,10 +24,32 @@ closeLogoDialogBtn.addEventListener('click', () => {
 const profilePic = document.getElementById('profile-image') // profile-image
 const profileInput = document.querySelector('.profile-input') // file-input
 
+window.onload = () => {
+    const storedImage = sessionStorage.getItem('storedImage');
+    if (storedImage) {
+        profilePic.src = storedImage;
+    }
+}
+
 profileInput.addEventListener('change', () => {
     const file = profileInput.files[0];
     profilePic.src = URL.createObjectURL(file);
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (event) {
+            // Save Base64 string to localStorage
+            sessionStorage.setItem('storedImage', event.target.result);
+        };
+        reader.readAsDataURL(file);
+    }
 })
+
+const quoteInput = document.querySelector('.quote-input');
+
+quoteInput.addEventListener('input', () => {
+    const quote = quoteInput.value;
+    sessionStorage.setItem('quote', quote);
+});
 
 window.addEventListener('load', () => {
     const savedData = JSON.parse(sessionStorage.getItem('formData'));
@@ -282,7 +304,15 @@ updateLanguage(selectedLang);
 
 const logoImage = document.querySelector('.logoImage');
 
+window.addEventListener('load', () => {
+    const savedLogo = sessionStorage.getItem('religiousLogo');
+    if (savedLogo) {
+        logoImage.src = savedLogo;
+    }
+})
+
 function changeReligiousLogo(src) {
     logoDialog.close();
     logoImage.src = src;
+    sessionStorage.setItem('religiousLogo', src);
 }

@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const data = sessionStorage.getItem('formData');
+const profile = sessionStorage.getItem('storedImage');
 const biodata = JSON.parse(data);
 console.log(biodata);
 
@@ -33,6 +34,25 @@ const mappedArray = Object.entries(biodata).map(([key, value]) => {
         dataHolder.appendChild(item);
     }
 });
+
+const profilePic = document.querySelector('.profile-image');
+
+if (profile) {
+    profilePic.src = profile;
+}
+
+const quoteText = sessionStorage.getItem('quote');
+
+if (quoteText) {
+    document.querySelector('.quote').textContent = quoteText;
+}
+
+const logoImage = document.querySelector('.logo-image-holder img');
+
+const savedLogo = sessionStorage.getItem('religiousLogo');
+if (savedLogo) {
+    logoImage.src = savedLogo;
+}
 
 // DOWNLOAD AS IMAGE
 document.getElementById('download-btn').addEventListener('click', () => {
