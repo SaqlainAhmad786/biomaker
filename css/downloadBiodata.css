@@ -57,6 +57,10 @@
     overflow: scroll;
 }
 
+.biodata-preview-img-container::-webkit-scrollbar {
+    display: none;
+}
+
 .biodata-preview-img-container .data-holder {
     position: absolute;
     top: 260px;
@@ -88,8 +92,6 @@
 }
 
 .logo-image-holder {
-    border-radius: 100vh;
-    overflow: hidden;
     position: absolute;
     top: 120px;
     left: 50%;
