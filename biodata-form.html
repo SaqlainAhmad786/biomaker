@@ -96,6 +96,14 @@
                     src="./assets/religiousLogos/swastik.png" alt=""></button>
         </div>
     </dialog>
+    <dialog class="errorDialog" id="dialog">
+        <button class="closeErrorDialogBtn"><img src="./assets/close.png"></button>
+        <div class="content">
+            <img src="./assets/cancel.png" alt="">
+            <p>Please fill up all required fields</p>
+            <button class="okayBtn">Okay</button>
+        </div>
+    </dialog>
     <div class="site-wrapper">
         <div class="doc-loader">
             <img src="images/preloader.gif" alt="">
@@ -131,7 +139,6 @@
 
 
         <div id="content" class="site-content center-relative">
-            <!-- <h1>Build Your Marriage Biodata</h1> -->
             <div id="services" class="section page-split" style="z-index: 5;">
                 <div class="section-wrapper block content-1170 center-relative">
                     <div class="bg-holder float-left">
@@ -165,7 +172,7 @@
                                     <h3 data-key="personalInformation">Personal Information</h3>
                                     <div class="form-input-container">
                                         <div class="coolinput">
-                                            <label class="text" data-key="fullName">Full Name</label>
+                                            <label class="text" data-key="full_name">Full Name</label>
                                             <input type="text" name="full_name" id="full_name" class="input"
                                                 placeholder="Saurabh">
                                         </div>
@@ -307,7 +314,7 @@
                                         </div>
                                         <button id="logoChangeBtn" type="button"><i class="fa fa-edit"></i>
                                             Change</button>
-                                        <input type="text" accept="image/*" class="quote-input">
+                                        <input type="text" placeholder="Enter your religious text" class="quote-input">
                                     </div>
                                 </div>
                                 <div class="buttons">

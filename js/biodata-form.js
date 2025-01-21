@@ -54,7 +54,7 @@ quoteInput.addEventListener('input', () => {
 window.addEventListener('load', () => {
     const savedData = JSON.parse(sessionStorage.getItem('formData'));
     if (savedData) {
-        document.getElementById('full_name').value = savedData.fullName || '';
+        document.getElementById('full_name').value = savedData.full_name || '';
         document.getElementById('dob').value = savedData.dob || '';
         document.getElementById('height').value = savedData.height || '';
         document.getElementById('place_of_birth').value = savedData.place_of_birth || '';
@@ -81,12 +81,24 @@ window.addEventListener('load', () => {
     }
 });
 
+const errorDialog = document.querySelector('.errorDialog')
+const closeErrorDialogBtn = document.querySelector('.closeErrorDialogBtn')
+const okayBtn = document.querySelector('.okayBtn')
+
+closeErrorDialogBtn.addEventListener('click', () => {
+    errorDialog.close()
+})
+
+okayBtn.addEventListener('click', () => {
+    errorDialog.close()
+})
+
 const form = document.getElementById("multiStepForm")
 const planForm = document.querySelector(".planForm")
 
 form.addEventListener("input", () => {
     const formData = {
-        fullName: document.getElementById('full_name').value,
+        full_name: document.getElementById('full_name').value,
         dob: document.getElementById('dob').value,
         height: document.getElementById('height').value,
         place_of_birth: document.getElementById('place_of_birth').value,
@@ -116,20 +128,40 @@ form.addEventListener("input", () => {
 
 form.addEventListener("submit", (e) => {
     e.preventDefault()
-    planDialog.showModal()
+    if (document.getElementById('full_name').value === "") {
+        errorDialog.showModal()
+        return
+    } else {
+        planDialog.showModal()
+    }
 })
 
 planForm.addEventListener("submit", (e) => {
-    e.preventDefault()
-    window.location.href = "biodata-download.html"
-})
+    e.preventDefault();
+    const formData = e.target;
+    const data = new FormData(formData);
+    const plan = data.get('plan');
+
+    const encodePlan = (value) => btoa(value);
+
+    if (plan === 'plan1') {
+        sessionStorage.setItem('codec', encodePlan('9'));
+        window.location.href = "biodata-download.html";
+    } else if (plan === 'plan2') {
+        sessionStorage.setItem('codec', encodePlan('8'));
+        window.location.href = "biodata-download.html";
+    } else if (plan === 'plan3') {
+        sessionStorage.setItem('codec', encodePlan('7'));
+        window.location.href = "biodata-download.html";
+    }
+});
 
 /********************************************************************************************/
 
 const translations = {
     english: {
         personalInformation: "Personal Information",
-        fullName: "Full Name",
+        full_name: "Full Name",
         dateOfBirth: "Date of Birth",
         height: "Height",
         placeOfBirth: "Place of Birth",
@@ -158,7 +190,7 @@ const translations = {
     },
     hindi: {
         personalInformation: "व्यक्तिगत जानकारी",
-        fullName: "पूरा नाम",
+        full_name: "पूरा नाम",
         dateOfBirth: "जन्म की तारीख",
         height: "ऊंचाई",
         placeOfBirth: "जन्म स्थान",
@@ -187,7 +219,7 @@ const translations = {
     },
     kannada: {
         personalInformation: "ವ್ಯಕ್ತಿಗತ ಮಾಹಿತಿ",
-        fullName: "ಪೂರ್ಣ ಹೆಸರು",
+        full_name: "ಪೂರ್ಣ ಹೆಸರು",
         dateOfBirth: "ಹುಟ್ಟಿದ ದಿನಾಂಕ",
         height: "ಎತ್ತರ",
         placeOfBirth: "ಹುಟ್ಟಿದ ಸ್ಥಳ",
@@ -216,7 +248,7 @@ const translations = {
     },
     marathi: {
         personalInformation: "वैयक्तिक माहिती",
-        fullName: "पूर्ण नाव",
+        full_name: "पूर्ण नाव",
         dateOfBirth: "जन्मतारीख",
         height: "उंची",
         placeOfBirth: "जन्मस्थान",
@@ -245,7 +277,7 @@ const translations = {
     },
     telugu: {
         personalInformation: "వ్యక్తిగత సమాచారం",
-        fullName: "పూర్తి పేరు",
+        full_name: "పూర్తి పేరు",
         dateOfBirth: "పుట్టిన తేదీ",
         height: "ఎత్తు",
         placeOfBirth: "పుట్టిన స్థలం",

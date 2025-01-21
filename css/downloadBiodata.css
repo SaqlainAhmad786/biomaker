@@ -69,10 +69,18 @@
 
 .data-holder p {
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.7;
     font-size: 12px;
     color: maroon;
-    letter-spacing: 1px;
+}
+
+.data-holder p strong {
+    text-transform: capitalize;
+    margin-right: 4px;
+}
+
+.data-holder p span {
+    letter-spacing: 0.5px;
 }
 
 .profile-image-holder {
@@ -81,7 +89,6 @@
     position: absolute;
     top: 240px;
     right: 80px;
-    width: 100px;
     height: 100px;
 }
 
